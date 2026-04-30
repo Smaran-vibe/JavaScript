@@ -1,14 +1,25 @@
  // Given five boxes, assign a random color and the random background to each box using dom concepts 
 
- let color = ["#163962", "#93C409", "#8E152D", "#F9E79F", "#85C1E9"];
- 
+console.log ("Script is initializing");
 
- let boxes = document.querySelectorAll(".box");
+ // let boxes = document.getElementsByClassName("box");
 
-   boxes.forEach(boxes => {
-    let randomColor = color[Math.floor(Math.random()*color.length)];
-    boxes.style.backgroundColor = randomColor;
+ // let boxes = document.querySelectorAll(".box");
 
-    console.log(randomColor);
-   })
+ let boxes = document.querySelector(".container").children;
 
+function getRandomColor() {
+    let val1 = Math.ceil(0 + Math.random() * 255); // a + r (b-a) a = 0 b = 255 r = random number between 0 and 1 
+    let val2 = Math.ceil(0 + Math.random() *255);
+    let val3 = Math.ceil(0 + Math.random() *255);
+
+    return `rgb(${val1}, ${val2}, ${val3})`
+
+}
+
+Array.from(boxes).forEach (e => {
+    e.style.backgroundColor = getRandomColor();
+    e.style.color = getRandomColor();
+
+
+})
