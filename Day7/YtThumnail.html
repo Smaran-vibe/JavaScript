@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    body {
+        background-color: black;
+
+    }
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 24px 0px 0 0;
+    }
+
+
+    .card {
+        height: 157px;
+        width: 90%;
+        border: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border-radius: 5px;
+        background-color: #0F0F0F;
+        cursor: pointer;
+
+
+
+    }
+    .card:hover{
+        background-color: #211f1f;
+    }
+    
+
+    .content {
+        position: relative;
+        margin: 0px 0px 22px 3px;
+        /* padding: 0; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .content h3 {
+        margin: 0;
+        padding: 0;
+        color:rgb(240, 246, 252);
+        font-weight: 600;
+        font-family: Segoe UI;
+
+    }
+    .content p {
+        color: #769295;
+        font-weight: 400;
+        font-family: Segoe UI;
+        font-size: 14px;
+        
+
+    }
+
+
+
+
+    .capsule {
+        height: 70%;
+        width: 15%;
+        border: none;
+        margin: 2px 6px 3px 18px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .capsule img {
+        object-fit: cover;
+    }
+
+    .duration {
+        background-color: #211f1f;
+        color: white;
+        padding: 1px 6px 6px 1px;
+        border-radius: 4px;
+        bottom: 6px;
+        right: 9px;
+        position: absolute;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+
+    </div>
+
+
+    <script src="card.js"></script>
+</body>
+
+</html>
