@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    .red { 
-        color: red; 
+    .red {
+        color: red;
     }
 </style>
+
 <body>
     <div class="container blue bg00">
         <div class="box"> Hey this is a box </div>
@@ -17,13 +19,13 @@
     <script>
         let div = document.createElement("div");
         div.innerHTML = "I have been added by <b> me myself.</b>"
-        div.setAttribute("class","created");
+        div.setAttribute("class", "created");
 
         // document.querySelector(".container").before(div); 
 
-         document.querySelector(".container").append(div) // append: adds the element as the last child of the parent element, while prepend: adds the element as the first child of the parent element.
+        document.querySelector(".container").append(div) // append: adds the element as the last child of the parent element, while prepend: adds the element as the first child of the parent element.
         //prepend is used to add the element at the beginning of the parent element.
-        
+
         let cont = document.querySelector(".container");
         cont.insertAdjacentHTML("beforebegin", "<b> OI oi oi nice </b>")
 
@@ -31,4 +33,5 @@
 
     </script>
 </body>
+
 </html>
