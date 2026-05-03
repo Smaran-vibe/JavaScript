@@ -15,7 +15,7 @@ const cardData = [
         views: 1900000,
         monthsold: 6,
         duration: "5:32:00",
-        thumbnail: "https://i.ytimg.com/an_webp/F6rLBOI_9UE/mqdefault_6s.webp?du=3000&sqp=CKOM088G&rs=AOn4CLASjEKijNMbt0l3ayb45UwOWLP58A"
+        thumbnail: "https://i.ytimg.com/vi/RjUyt2jzZfY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCjLZ8PoxS4BGCqZj58RkKqfymyDQ"
     },
     {
         title: "How to solve the problem of person trying to solve the problem in JS",
@@ -23,7 +23,7 @@ const cardData = [
         views: 9600000,
         monthsold: 6,
         duration: "5:32:00",
-        thumbnail: "https://i.ytimg.com/vi/mQwdNHusFLU/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFsgWyhbMA8=&rs=AOn4CLB0ZJUrmc1mfXBlp9wiPs78Mv9Jaw"
+        thumbnail: "https://i.ytimg.com/vi/ILnhg2qsIdY/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDh9VAtOAeVbrnZVLK3aQlyHGbZfQ"
     },
 
 
@@ -62,7 +62,7 @@ function createCard(title, cName, views, monthsold, duration, thumbnail) {
 
 }
 
-createCard("Introduction to Backend | Zoro Web development Course Tutorial #1", "Lost Developer", 3000000, "3", "10:00", "https://i.ytimg.com/an_webp/S6aT56O-40c/mqdefault_6s.webp?du=3000&sqp=CPuM088G&rs=AOn4CLDy6bSvTYfa3pUl9L9xNl3eFSBF-Q")
+createCard("Introduction to Backend | Zoro Web development Course Tutorial #1", "Lost Developer", 3000000, "3", "10:00", "https://i.ytimg.com/vi/DCPU5YWHffM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCynhHF_pSl5nj__HvzJmeSOXMKbQ")
 
 function formatViews(views) {
     if (typeof views !== "number") return "0";
