@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers Terminal</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .terminal {
+            height: 80vh;
+            width: 30vw;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #78F455;
+            overflow-y: auto;
+
+
+
+        }
+
+        .box {
+            height: 80%;
+            width: 29vw;
+            border: none;
+            display: flex;
+            align-items: start;
+            position: relative;
+            background-color: black;
+            font-family: monospace;
+            color: #73f64f;
+        }
+
+        .loading::after {
+            content: "...";
+            animation: dots 1s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0% {
+                content: "";
+            }
+
+            25% {
+                content: ".";
+            }
+
+            50% {
+                content: "..";
+            }
+
+            75% {
+                content: "...";
+            }
+
+            100% {
+                content: "";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="terminal" class="terminal">
+        <div class="box">
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="hacking.js"></script>
+</body>
+
+</html>
