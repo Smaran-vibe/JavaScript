@@ -13,7 +13,7 @@ const cardData = [
         title: "How to solve the problem of person trying to code in JS",
         cName: "East Blue",
         views: 1900000,
-        monthsold: 6,
+        monthsold: 7,
         duration: "5:32:00",
         thumbnail: "https://i.ytimg.com/vi/RjUyt2jzZfY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCjLZ8PoxS4BGCqZj58RkKqfymyDQ"
     },
@@ -22,7 +22,7 @@ const cardData = [
         cName: "Grand Line",
         views: 9600000,
         monthsold: 6,
-        duration: "5:32:00",
+        duration: "8:00",
         thumbnail: "https://i.ytimg.com/vi/ILnhg2qsIdY/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDh9VAtOAeVbrnZVLK3aQlyHGbZfQ"
     },
 
