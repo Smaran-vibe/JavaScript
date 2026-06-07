@@ -15,7 +15,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/blog/:slug/', (req, res) => {
-     
+
     console.log(req.params);
     console.log(req.query);
 
