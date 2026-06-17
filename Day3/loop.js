@@ -25,3 +25,17 @@ while (i < 80){
     i++;
     console.log(i);
 }
+
+for (let i = 1; i <= 5; i++) {
+    console.log("Hello");
+}
+
+const person = {
+    name: "Luffy",
+    age: 20,
+    city: "Kathmandu"
+};
+
+for (const key in person) {
+    console.log(key, person[key]);
+}
