@@ -8,7 +8,6 @@ const part2 = arr.splice(1, 4)
 console.log("B" + arr);
 console.log("B" + part2);
 
-
 console.log(arr, typeof arr);
 console.log(arr.includes("Smaran"));
 
