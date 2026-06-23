@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="title"> Hello DOM
+        <p>
+
+        </p>
+
+
+    </h1>
+
+    <h2 id="status"></h2>
+
+    <ul id="fruit" class="fruit">
+
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+
+    <h3 class="tasks">Tasks
+        <ol>
+            <li class="task">Buy Milk</li>
+            <li class="task">Sell Milk</li>
+            <li class="task">No buy Milk</li>
+        </ol>
+    </h3>
+
+    <div class="box" id="box">
+
+    </div>
+
+    <div class="Menu">
+        Menu
+        <ul class="data">
+         
+        </ul>
+    </div>
+
+
+    <script>
+
+        const title = document.getElementById('title')
+        console.log(title);
+        title.textContent = 'Change with getElementById';
+        title.style.color = '#7c5cff';
+        console.log(title.innerText);
+        title.innerText = "Hello We are learning js"
+        title.innerhtml = "Hello We are learning js"
+        title.outertext = "Hello We are learning js"
+
+        document.getElementById('status').textContent = 'id section works!'
+        console.log('Selected:', title.tagName, '#' + title.id);
+
+        const fruit = document.getElementsByClassName("fruit");
+
+        const items = fruit[0].children;
+
+        items[0].textContent = "Apple";
+        items[1].textContent = "Banana";
+        items[2].textContent = "Grapes";
+        items[3].textContent = "Great";
+        const ul = document.querySelector(".fruit");
+
+        const li = document.createElement("li");
+
+        li.textContent = "Papaya";
+
+        ul.append(li);
+
+        const first = document.querySelector('.task')
+        console.log('First task:', first.textContent);
+
+
+        const tasks = document.querySelectorAll('.task')
+        console.log('Total tasks:', tasks.length);
+
+
+        tasks.forEach((t, i) => {
+            t.textContent = (i + 1) + '. ' + t.textContent;
+        })
+
+        const box = document.getElementById('box')
+
+        box.textContent = 'Safe text: <b> is shown literally';
+        console.log('As text: ', box.textContent);
+
+        box.innerHTML = '<b style ="color: #0f9e6e"> Bold HTML </b> via innerHTML';
+        console.log('innerHTML builds real elements - use only trusted strings');
+
+        const dish = document.getElementsByClassName('data')
+        const dishes = [
+            { name: 'Momo', price: '120' },
+            { name: 'Chowmein', price: '100' },
+            { name: 'Thukpa', price: '150' }
+        ]
+
+        dishes.forEach((item) => {
+            const li = document.createElement("li");
+
+            li.textContent = `${item.name} - ${item.price}`;
+
+            dish[0].append(li);
+        });
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
