@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+</head>
+
+<body>
+
+    <div id="score" class="score">
+
+        <button id="plus" class="plus">
+            +1
+        </button>
+
+        <button id="reset" class="reset">
+            Reset
+        </button>
+
+        <H1 id="display" class="display">0</H1>
+
+    </div>
+
+    <script>
+        let count = 0;
+        const score = document.getElementById('score');
+
+        const plusbtn = document.getElementById('plus')
+        plusbtn.addEventListener('click', () => {
+            count = count + 1
+            display.textContent = count;
+        })
+
+        const reset = document.getElementById('reset')
+        reset.addEventListener('click', () => {
+            count = 0;
+            display.textContent = count;
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
