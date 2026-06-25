@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    form {
+        width: 350px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    small {
+        color: red;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <form id="form">
+
+        <h2>Registration Form</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+
+        <small id="nameError"></small>
+
+        <input type="email" id="email" placeholder="Email">
+
+        <small id="emailError"></small>
+
+        <input type="password" id="password" placeholder="Password">
+
+        <small id="passwordError"></small>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+        <small id="confirmError"></small>
+
+        <input type="number" id="age" placeholder="Age">
+
+        <small id="ageError"></small>
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <small id="phoneError"></small>
+
+        <label>
+            <input type="radio" name="gender" value="Male">
+            Male
+        </label>
+
+        <label>
+            <input type="radio" name="gender" value="Female">
+            Female
+        </label>
+
+        <small id="genderError"></small>
+
+        <label>
+
+            <input type="checkbox" id="terms">
+
+            Accept Terms
+
+        </label>
+
+        <small id="termsError"></small>
+
+        <button>
+            Register
+        </button>
+
+    </form>
+
+    <script>
+
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const age = document.getElementById("age");
+        const phone = document.getElementById("phone");
+        const terms = document.getElementById("terms");
+        const gender = document.getElementsByName("gender");
+
+        function clearErrors() {
+            document.querySelectorAll("small").forEach(function (error) {
+                error.innerText = "";
+            });
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            clearErrors();          // clear old errors first
+
+            let isValid = true;     
+
+            if (name.value.trim() === "") {
+                document.getElementById("nameError").innerText = "Name required";
+                isValid = false;
+            } else if (name.value.length < 3) {
+                document.getElementById("nameError").innerText = "Minimum 3 letters";
+                isValid = false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                document.getElementById("emailError").innerText = "Invalid email";
+                isValid = false;
+            }
+
+            if (password.value.length < 8) {
+                document.getElementById("passwordError").innerText = "Minimum 8 characters";
+                isValid = false;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                document.getElementById("confirmError").innerText = "Passwords do not match";
+                isValid = false;
+            }
+
+            if (age.value === "" || age.value < 18) {
+                document.getElementById("ageError").innerText = "You must be 18 or older";
+                isValid = false;
+            }
+
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone.value)) {
+                document.getElementById("phoneError").innerText = "Enter a valid 10-digit number";
+                isValid = false;
+            }
+
+            let selected = false;
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) selected = true;
+            }
+            if (!selected) {
+                document.getElementById("genderError").innerText = "Please select a gender";
+                isValid = false;
+            }
+
+            if (!terms.checked) {
+                document.getElementById("termsError").innerText = "You must accept the terms";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert(`Registration Successful! ${name.value}`);
+                form.reset();
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>
