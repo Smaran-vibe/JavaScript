@@ -47,6 +47,13 @@
         </ul>
     </div>
 
+    <button id="btn" class="btn">
+        Click me
+
+    </button>
+
+    <p id="out"></p>
+
 
     <script>
 
@@ -112,6 +119,17 @@
 
             dish[0].append(li);
         });
+
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            alert("Beware button is being clicked")
+            document.getElementById('out')
+                .textContent = 'Button was Clicked'
+        })
+
+        console.log('Listener attached - click the button above.');
+
 
 
 
