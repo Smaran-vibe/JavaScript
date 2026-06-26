@@ -19,7 +19,7 @@
             Reset
         </button>
 
-        <H1 id="display" class="display">0</H1>
+        <h1 id="display" class="display">0</h1>
 
     </div>
 
@@ -38,6 +38,29 @@
             count = 0;
             display.textContent = count;
         });
+
+        function getUser(id, callback) {
+            setTimeout(() => {
+                callback(null, { id, name: 'Smaran' })
+            }, 500)
+        }
+
+        getUser(7, (error, user) => {
+
+            if (error) {
+                console.log('failed:', error);
+                return;
+            }
+            console.log('Loaded User:', user.name);
+
+
+
+
+        }
+
+        )
+
+
 
 
     </script>
