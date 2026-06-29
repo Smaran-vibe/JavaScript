@@ -114,9 +114,9 @@
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
-            clearErrors();          // clear old errors first
+            clearErrors();
 
-            let isValid = true;     
+            let isValid = true;
 
             if (name.value.trim() === "") {
                 document.getElementById("nameError").innerText = "Name required";
